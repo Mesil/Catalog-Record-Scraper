@@ -1,0 +1,6 @@
+# Catalog-Record-Scraper
+This is a simple webscraper for extracting information from digital catalogs based on the presence of keywords.
+This tool is based on the Scrapy framework and, as such, requires the presence and use of scrapy to run. Instructions on installing scrapy may be found here: http://doc.scrapy.org/en/latest/intro/install.html. Once Scrapy in installed, this tool can be used by opening the terminal, moving to the directory containing the project files, and entering the comand 'scrapy crawl catalog'. If the program is working correctly, it should generate a .csv file whose contents match those of 'testscrape.csv'.
+As is, this tool is of extreemly narrow use. Happily, modifying the tool is a straightforward—if not easy—task.
+The first file to addapt is 'items.py' located in the 'Catalog_Scraper' subdirectory; there you can define the information you wish to retrieve from catalog records. To produce a simple test case, only the 'title' item is curently active, but new items can be defined following the format provided by 'title' and the other items which are currently commented out.
+Once the you have determined the information you wish to retrieve, the next step is to apply those items to the .csv file which the tool generates. That is acomplished by modifying the 'pipelines.py' file, also contained in the 'Catalog_Scraper' subdirectory. In 
